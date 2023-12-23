@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 16px;
+}
+
+:root {
+/* ### Primary */
+--Moderate-cyan: hsl(176, 50%, 47%);
+--Dark-cyan: hsl(176, 72%, 28%);
+/* ### Neutral */
+--Black: hsl(0, 0%, 0%);
+--Dark-gray: hsl(0, 0%, 48%);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.page {
+  position: relative;
+}
+
+
+.top {
+  background-image: url('images/image-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100vw;
+  padding: 1.5rem;
+}
+
+.top header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom {
+  margin:0 1.5rem;
+  transform: translateY(-2%);
+}
+
+.carda, .cardb, .cardc {
+  border-radius: 0.7rem;
+}
+
+.carda {
+  position: relative;
+  background-color: #fff;
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: center;
+  
+}
+
+.mlogo{
+  position: absolute;
+  top: -10%;
+  left: 40%;
+}
+
+.carda h2 {
+  font-size: 1.3rem;;
+}
+
+.carda p {
+  font-size: 0.88rem;
+  color: var(--Dark-gray);
+  line-height: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project {
+  width: 13rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  font-weight: 600;
+}
+
+.bookmark {
+  border:none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.cardb {
+  background-color: #fff;
+  margin:1.5rem 0;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.cardb h1 {
+  font-size: 2rem;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.cardb p {
+  font-size: 0.85rem;
+  color: var(--Dark-gray);
+  padding-bottom: 1.5rem;
+  
+}
+
+.amount, .backers {
+  margin:0 6rem 1rem;
+  border-bottom: 1px solid hsla(0, 0%, 48%, 0.32);
+}
+
+/* Progress bar */
+#myProgress {
+  width: 85%;
+  background-color: hsla(0, 0%, 48%, 0.32);
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;;
+}
+
+#myBar {
+  width: 80%;
+  height: 0.75rem;
+  background-color: var(--Moderate-cyan);
+  border-radius: 0.5rem;
+}
+
+.cardc {
+  background-color: #fff;
+  margin:0;
+  padding: 2rem 1.8rem;
+}
+
+.cardc h3 {
+  font-size: 1.15rem;
+}
+
+.cardc p {
+  color: var(--Dark-gray);
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.cardd {
+  margin: 1.5rem 0 0;
+  border: 1px solid hsla(0, 0%, 48%, 0.32);
+  box-shadow: 0 0 1px;
+  border-radius: 0.5rem;
+  padding:1.5rem;
+}
+
+.head h3 {
+  font-size: 0.8rem;
+}
+
+.head h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Moderate-cyan);
+  padding-top: 0.5rem;
+}
+
+.body p {
+  font-size: 0.82rem;
+  padding-bottom: 1.5rem;
+}
+
+.foot h1 {
+  font-size: 2rem;
+}
+
+.foot span {
+  font-size: 0.9rem;
+  color: var(--Dark-gray);
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.foot button {
+  width: 10rem;
+  height: 3.2rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* Modal */
+#modal-block {
+  margin: 1.6rem;
+  position: absolute;
+  top: 6rem;
+  z-index: 999;
+  box-shadow: 0px 0px 1000px 100px rgb(18, 18, 18);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type=radio] {
+  width: 100%;
+  height: 1.6rem;
+  accent-color: hsl(176, 92%, 30%);
+  display: inline;
+  margin-right: 1rem;
+}
+
+.second-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.head {
+  padding-left: 0.5rem;
+}
+
+.cardm {
+  margin: 1.5rem 0 0;
+  border: 1px solid hsla(0, 0%, 48%, 0.32);
+  box-shadow: 0 0 1px;
+  border-radius: 0.5rem;
+  padding:0;
+}
+
+.changea {
+  padding: 1.5rem;
+}
+
+.pledge {
+  text-align: center;
+  border-top: 1px solid hsla(0, 0%, 48%, 0.34);
+  padding: 1.5rem;
+}
+
+.pledge p {
+  padding: 0;
+}
+
+.pledge-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0;
+}
+
+.pledge-foot span {
+  font-size: 0.88rem;
+  color: var(--Dark-gray);
+}
+
+.price button {
+  width: 5.5rem;
+  height: 2.5rem;
+  border: 1px solid hsla(0, 0%, 48%, 0.34);
+  background-color: transparent;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.continue button {
+  width: 6.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.thankyou {
+  background-color: white;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid hsla(0, 0%, 48%, 0.32);
+  border-radius: 0.7rem;
+  position: absolute;
+  top: 6rem;
+  z-index: 999;
+  box-shadow: 0px 0px 700px 100px rgb(18, 18, 18);
+}
+
+.thankyou h3 {
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+}
+
+.thankyou p {
+  font-size: 0.88rem;
+  color: var(--Dark-gray);
+  line-height: 1.5rem;
+}
+
+.thankyou button {
+  width: 6.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--Moderate-cyan);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.m-menu {
+  position: absolute;
+  z-index: 999;
+  background-color: rgb(255, 249, 249);
+  width: 88vw;
+  top: 3%;
+  left: 6%;
+  border-radius: 1rem;
+  box-shadow: 0 70px 200px 30px black;
+}
+
+.m-menu li {
+  list-style-type: none;
+  padding: 1.5rem;
+  border-bottom: 1px solid hsla(0, 0%, 48%, 0.141);
+  font-size: 1.1rem;
+  font-weight: 500; 
+}
+
+.m-menu li:last-of-type {
+  border:none;
+}
+
+.green:hover {
+  background-color: var(--Dark-cyan);
+  cursor: pointer;
+}
+
+.mobile-menu:hover, .m-menu:hover, .bookmark:hover, .close:hover {
+  cursor: pointer;
+}
+
+.outlined:hover {
+  border: 1px solid var(--Moderate-cyan);
+  cursor: pointer;
+}
+
+.head h3:hover {
+  color: var(--Moderate-cyan);
+  cursor: pointer;
+}
+
+.supressed-container{
+  -webkit-filter: blur(1px); 
+  -moz-filter: blur(1px) ;
+  -o-filter: blur(1px) ;
+  -ms-filter: blur(1px) ;
+  filter: blur(1px) ;
+  opacity: 0.75 !important;
+}
+
+#grey {
+  background-color: hsla(0, 0%, 48%, 0.639);
+}
+
+.d-menu, .tag {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .d-menu, .tag {
+    display: block;
+  }
+
+  .top {
+    background-image: url('images/image-hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100vw;
+    padding: 3rem 10rem;
+  }
+
+  .d-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .d-menu li {
+    list-style-type: none;
+    color: white;
+    font-weight: 500;
+    padding-left: 2rem;
+  }
+
+  .d-menu li:hover {
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .bottom {
+    margin:0 22rem;
+    transform: translateY(-2%);
+  }
+
+  .mlogo{
+    position: absolute;
+    top: -10%;
+    left: 45%;
+  }
+
+  .carda {
+    padding: 3.5rem;
+  }
+
+  .carda h2 {
+    font-size: 1.75rem;;
+  }
+  
+  .carda p {
+    font-size: 1rem;
+  }
+  .selection {
+    padding-top: 1rem;
+  }
+
+  .bookmark {
+    width: 10rem;
+    height: 57px;
+    border-radius: 2.5rem;
+    background-color: hsla(0, 0%, 48%, 0.157);
+    text-align: left;
+    position: relative;
+  }
+
+  .bookmark span{
+   position: absolute;
+   top: 27%;
+   right: 10%;
+   padding-left: 0.5rem;
+   color: var(--Dark-gray);
+   font-weight: 600;
+  }
+
+  .cardba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  
+  .cardba h1 {
+    font-size: 2rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .cardba p {
+    padding-top: 0.5rem;
+  }
+  
+  .amount, .backers {
+    margin: 1rem;
+    border: none;
+    border-right: 1px solid hsla(0, 0%, 48%, 0.32);
+    text-align: center;
+    padding-right: 4rem;
+    padding-left: 1rem;
+  }
+
+  .days {
+    padding-right: 6rem;
+    padding-left: 1rem;
+  }
+  
+
+  /* Progress bar */
+#myProgress {
+  width: 85%;
+  background-color: hsla(0, 0%, 48%, 0.32);
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  margin-left: 3.5rem;;
+}
+
+#myBar {
+  width: 80%;
+  height: 0.75rem;
+  background-color: var(--Moderate-cyan);
+  border-radius: 0.5rem;
+}
+
+.cardc {
+  padding: 3rem 3.5rem;
+}
+
+.cardc h3 {
+  font-size: 1.2rem;
+}
+
+.cardc p {
+  font-size: 0.95rem;
+  line-height: 1.7rem;
+  padding-top: 2rem;
+}
+  
+.cardd {
+  margin:2rem 1rem 0 0;
+  padding:2rem;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head h3 {
+  font-size: 1.2rem;
+}
+
+.head h4 {
+  font-size: 1rem;
+}
+
+.body p {
+  font-size: 0.95rem;
+  padding-bottom: 1.5rem;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modal */
+#modal-block {
+  margin: 0 22rem;
+  position: absolute;
+  top: 12rem;
+  z-index: 999;
+}
+
+.pledge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head h4 {
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.pledge p {
+  padding: 0;
+}
+
+.continue {
+  margin-left: 1rem;
+}
+
+.thankyou {
+  margin: 0 30rem;
+  padding: 3rem;
+  position: absolute;
+  top: 40rem;
+  z-index: 999;
+}
+
+.thankyou h3 {
+  font-size: 1.5rem;
+}
+
+.thankyou p {
+  font-size: 0.9rem;
+  color: var(--Dark-gray);
+  line-height: 1.7rem;
+}
+
+.thankyou button {
+  margin: 1.5rem 0 0;
+}
+
+}
